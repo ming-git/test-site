@@ -46,8 +46,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: tibitatxyz/testwebsite:latest
-          cache-from: type=local, src=/tmp/.buildx-cache
-          cache-to: type=local, dest=/tmp/.buildx-cache
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
   
       - name: Image Digest
         run: echo ${{ steps.docker_build.outputs.digest }}
